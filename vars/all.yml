@@ -17,15 +17,15 @@
 
   mysql:
       install: '1'
-      root_password: $6$w6YOgLumhUZbHR3$LeQS3dVrQKVelmFFEn6OGE0YwsewFS2BWvZsiVFaeq9SQbs2IoMYF.mE5sSrB6kPpmu7UTQb90F1br3MVXFHj0
+      root_password: $6$rounds=656000$drXDm6S/Y6pzhjg1$BClWEc2T2IoXuMwdCUwAapFZtIdbZm2KHi31UARg3aASe9mdorhL1LnhET1eglVmsmzt0dFapiQ02gooO3zYn0
       database: db
-      user: crowdlinker
-      password: $6$w6YOgLumhUZbHR3$LeQS3dVrQKVelmFFEn6OGE0YwsewFS2BWvZsiVFaeq9SQbs2IoMYF.mE5sSrB6kPpmu7UTQb90F1br3MVXFHj0
+      user: simplyinvoice
+      password: $6$rounds=656000$drXDm6S/Y6pzhjg1$BClWEc2T2IoXuMwdCUwAapFZtIdbZm2KHi31UARg3aASe9mdorhL1LnhET1eglVmsmzt0dFapiQ02gooO3zYn0
       dump: ''
 
   user:
-    username: 'crowdlinker'
-    password: $6$w6YOgLumhUZbHR3$LeQS3dVrQKVelmFFEn6OGE0YwsewFS2BWvZsiVFaeq9SQbs2IoMYF.mE5sSrB6kPpmu7UTQb90F1br3MVXFHj0
+    username: 'simplyinvoice'
+    password: $6$rounds=656000$drXDm6S/Y6pzhjg1$BClWEc2T2IoXuMwdCUwAapFZtIdbZm2KHi31UARg3aASe9mdorhL1LnhET1eglVmsmzt0dFapiQ02gooO3zYn0
 
   composer:
     install: '1'

@@ -1,12 +1,15 @@
 ---
   - name: Set PHP FPM to listen on TCP instead of socket
     raw: sudo sed -i "s/listen =.*/listen = 127.0.0.1:9000/" /etc/php/7.0/fpm/pool.d/www.conf
+    notify: restart php7.0-fpm
 
   - name: Set Permissions on socket - owner
     raw: sudo sed -i "s/listen\.owner.*/listen.owner = www-data/" /etc/php/7.0/fpm/pool.d/www.conf
+    notify: restart php7.0-fpm
 
   - name: Set permissions on socket - group
     raw: sudo sed -i "s/listen\.group.*/listen.group = www-data/" /etc/php/7.0/fpm/pool.d/www.conf
+    notify: restart php7.0-fpm
 
   - name: Set permissions on socket - mode
     raw: sudo sed -i "s/listen\.mode.*/listen.mode = 0666/" /etc/php/7.0/fpm/pool.d/www.conf
