@@ -16,19 +16,22 @@
     copy: src=h5bp dest=/etc/nginx owner=root group=root
 
   - name: Disable Default Config
-    sudo: yes
+    become: true
+    become_user: root
     file:
       dest: /etc/nginx/sites-enabled/default
       state: absent
     notify: restart nginx
 
   - name: Symlink default site
-    sudo: yes
+    become: true
+    become_user: root
     template: src=default.j2 dest=/etc/nginx/sites-available/default
     notify: restart nginx
 
   - name: Enable SFH Site Config
-    sudo: yes
+    become: true
+    become_user: root
     file:
       src: /etc/nginx/sites-available/default
       dest: /etc/nginx/sites-enabled/default
@@ -36,7 +39,8 @@
     notify: restart nginx
 
   - name: Set Nginx PID
-    sudo: yes
+    become: true
+    become_user: root
     lineinfile:
       dest: /etc/nginx/nginx.conf
       regexp: "^pid"
@@ -45,7 +49,8 @@
     notify: restart nginx
 
   - name: Set Nginx user
-    sudo: yes
+    become: true
+    become_user: root
     lineinfile:
       dest: /etc/nginx/nginx.conf
       regexp: "^user"
