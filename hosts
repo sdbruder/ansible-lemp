@@ -1,2 +1,2 @@
 [web]
-server_host # server host ips
+ubuntu  ansible_user=ubuntu ansible_become=true
