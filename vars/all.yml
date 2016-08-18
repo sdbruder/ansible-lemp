@@ -6,8 +6,8 @@
 
   nginx:
     install: '1'
-    docroot: '/usr/share/nginx/html'
-    servername: 'localhost'
+    docroot: '/app/public'
+    servername: 'example.com'
 
   php:
     install: '1'
